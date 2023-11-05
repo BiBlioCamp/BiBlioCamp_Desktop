@@ -1,6 +1,5 @@
 ﻿using BBC_Desktop.model;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,42 +11,44 @@ using System.Windows.Forms;
 
 namespace BBC_Desktop.view
 {
-    public partial class frmCadastrarCliente : Form
+    public partial class frmCadastrarLivro : Form
     {
-        public frmCadastrarCliente()
+        public frmCadastrarLivro()
         {
             InitializeComponent();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (ConverterFoto() != null && txtEmail.Text != "" && txtNome.Text != "" && txtRa.Text != "")
+            if (ConverterFoto() != null && txtAutor.Text != "" && txtEditora.Text != "" && txtTitulo.Text != "" && mkdData.Text != ""
+                && cbbClasse.Text != "")
             {
                 byte[] foto = ConverterFoto();
-                Cliente cliente = new Cliente(txtEmail.Text, txtSenha.Text, txtNome.Text, mkdTelefone.Text,
-                    int.Parse(txtRa.Text), foto);
+                Livro livro = new Livro(txtTitulo.Text, txtAutor.Text, txtEditora.Text, mkdData.Text, cbbClasse.Text, foto);
 
-                try
+                if(livro.cadastrarLivro())
                 {
-                    if (cliente.cadastrarCliente())
-                    {
-                        MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);
-                        limpar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Falha ao cadastrar cliente!", "Falha", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Livro cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);
+                    limpar();
                 }
-                catch (Exception ex)
+                else
                 {
-                    Console.WriteLine(ex.ToString());
+                    MessageBox.Show("Falha ao cadastrar livro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Nenhum campo pode estar vazio!", "Falha", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nenhum campo pode estar vazio!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public void limpar()
+        {
+            txtAutor.Text = "";
+            txtTitulo.Text = "";
+            txtEditora.Text = "";
+            mkdData.Text = "";
+            cbbClasse.Text = "";
         }
 
         private byte[] ConverterFoto()
@@ -70,21 +71,6 @@ namespace BBC_Desktop.view
             return bArray;
         }
 
-        public void limpar()
-        {
-            txtRa.Text = "";
-            txtNome.Text = "";
-            txtEmail.Text = "";
-            txtSenha.Text = "";
-            mkdTelefone.Text = "";
-            ptbFoto.Image = null;
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            limpar();
-        }
-
         private void btnFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -104,6 +90,11 @@ namespace BBC_Desktop.view
                 }
             }
             dialog.Dispose();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limpar();
         }
     }
 }

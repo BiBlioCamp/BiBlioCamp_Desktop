@@ -17,3 +17,5 @@ C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\De
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.view.frmCadastrarCliente.resources
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.frmBiBliocamp.resources
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.frmCadastrarUsuario.resources
+C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.view.frmCadastrarLivro.resources
+C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.view.frmConsultarAtualizarLivro.resources

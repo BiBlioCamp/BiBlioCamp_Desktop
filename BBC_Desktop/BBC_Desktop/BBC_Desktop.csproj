@@ -49,31 +49,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="view\CadastrarUsuario.cs">
+    <Compile Include="model\Livro.cs" />
+    <Compile Include="view\frmConsultarAtualizarLivro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\CadastrarUsuario.Designer.cs">
-      <DependentUpon>CadastrarUsuario.cs</DependentUpon>
+    <Compile Include="view\frmConsultarAtualizarLivro.Designer.cs">
+      <DependentUpon>frmConsultarAtualizarLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="connection\Conexao.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\Usuario.cs" />
-    <Compile Include="view\CadastrarCliente.cs">
+    <Compile Include="view\frmCadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\CadastrarCliente.Designer.cs">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <Compile Include="view\frmCadastrarCliente.Designer.cs">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\BiBlioCamp.cs">
+    <Compile Include="view\frmBiBlioCamp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\BiBlioCamp.Designer.cs">
-      <DependentUpon>BiBlioCamp.cs</DependentUpon>
+    <Compile Include="view\frmBiBlioCamp.Designer.cs">
+      <DependentUpon>frmBiBlioCamp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="view\CadastrarUsuario.resx">
-      <DependentUpon>CadastrarUsuario.cs</DependentUpon>
+    <Compile Include="view\frmCadastrarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmCadastrarLivro.Designer.cs">
+      <DependentUpon>frmCadastrarLivro.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\frmConsultarAtualizarLivro.resx">
+      <DependentUpon>frmConsultarAtualizarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmCadastrarLivro.resx">
+      <DependentUpon>frmCadastrarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,11 +103,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\CadastrarCliente.resx">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="view\frmCadastrarCliente.resx">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\BiBlioCamp.resx">
-      <DependentUpon>BiBlioCamp.cs</DependentUpon>
+    <EmbeddedResource Include="view\frmBiBlioCamp.resx">
+      <DependentUpon>frmBiBlioCamp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

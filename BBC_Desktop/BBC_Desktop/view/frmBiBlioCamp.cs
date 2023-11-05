@@ -32,7 +32,7 @@ namespace BBC_Desktop
                 Usuario usuario = new Usuario(txtUsername.Text, txtSenha.Text);
                 if (usuario.consultarUsuario())
                 {
-                    MessageBox.Show("Bem vindo " + txtUsername.Text + "!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Bem vindo " + txtUsername.Text + "!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     gpbLogin.Visible = false;
                     mspBiBliocamp.Enabled = true;
                 }
@@ -59,6 +59,27 @@ namespace BBC_Desktop
             frmCadastrarUsuario cadastrarUsuario = new frmCadastrarUsuario();
             cadastrarUsuario.MdiParent = this;
             cadastrarUsuario.Show();
+        }
+
+        private void cadastroDeLivroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastrarLivro cadastrarLivro = new frmCadastrarLivro();
+            cadastrarLivro.MdiParent = this;
+            cadastrarLivro.Show();
+        }
+
+        private void consultarLivrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarAtualizarLivro conAttLivro = new frmConsultarAtualizarLivro();
+            conAttLivro.MdiParent = this;
+            conAttLivro.Show();
+        }
+
+        private void atualizarLivroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarAtualizarLivro conAttLivro = new frmConsultarAtualizarLivro();
+            conAttLivro.MdiParent = this;
+            conAttLivro.Show();
         }
     }
 }
