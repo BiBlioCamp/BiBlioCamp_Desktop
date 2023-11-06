@@ -45,6 +45,9 @@ namespace BBC_Desktop
             this.cadastroDeLivroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarLivrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarLivroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gpbLogin.SuspendLayout();
             this.mspBiBliocamp.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +55,7 @@ namespace BBC_Desktop
             // gpbLogin
             // 
             this.gpbLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.gpbLogin.Controls.Add(this.lblSenha);
             this.gpbLogin.Controls.Add(this.btnEntrar);
             this.gpbLogin.Controls.Add(this.label1);
             this.gpbLogin.Controls.Add(this.txtSenha);
@@ -80,10 +84,11 @@ namespace BBC_Desktop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 120);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(71, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 3;
             this.label1.Tag = "";
             this.label1.Text = "Senha:";
@@ -110,18 +115,19 @@ namespace BBC_Desktop
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Location = new System.Drawing.Point(79, 68);
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.Location = new System.Drawing.Point(63, 65);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(39, 13);
+            this.lblAdmin.Size = new System.Drawing.Size(57, 16);
             this.lblAdmin.TabIndex = 0;
-            this.lblAdmin.Text = "Admin:";
+            this.lblAdmin.Text = "Usuário:";
             // 
             // mspBiBliocamp
             // 
             this.mspBiBliocamp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItem,
             this.usuárioToolStripMenuItem,
+            this.clienteToolStripMenuItem,
             this.livroToolStripMenuItem});
             this.mspBiBliocamp.Location = new System.Drawing.Point(0, 0);
             this.mspBiBliocamp.Name = "mspBiBliocamp";
@@ -132,7 +138,9 @@ namespace BBC_Desktop
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarClienteToolStripMenuItem});
+            this.cadastrarClienteToolStripMenuItem,
+            this.consultarClienteToolStripMenuItem,
+            this.alterarClienteToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.clienteToolStripMenuItem.Text = "Cliente";
@@ -190,6 +198,31 @@ namespace BBC_Desktop
             this.atualizarLivroToolStripMenuItem.Text = "Atualizar Livro";
             this.atualizarLivroToolStripMenuItem.Click += new System.EventHandler(this.atualizarLivroToolStripMenuItem_Click);
             // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(79, 194);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(102, 13);
+            this.lblSenha.TabIndex = 5;
+            this.lblSenha.Text = "Esqueceu a senha?";
+            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click);
+            // 
+            // consultarClienteToolStripMenuItem
+            // 
+            this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarClienteToolStripMenuItem.Text = "Consultar Cliente";
+            this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
+            // 
+            // alterarClienteToolStripMenuItem
+            // 
+            this.alterarClienteToolStripMenuItem.Name = "alterarClienteToolStripMenuItem";
+            this.alterarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarClienteToolStripMenuItem.Text = "Alterar Cliente";
+            this.alterarClienteToolStripMenuItem.Click += new System.EventHandler(this.alterarClienteToolStripMenuItem_Click);
+            // 
             // frmBiBliocamp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +262,9 @@ namespace BBC_Desktop
         private System.Windows.Forms.ToolStripMenuItem cadastroDeLivroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarLivrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atualizarLivroToolStripMenuItem;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.ToolStripMenuItem consultarClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alterarClienteToolStripMenuItem;
     }
 }
 

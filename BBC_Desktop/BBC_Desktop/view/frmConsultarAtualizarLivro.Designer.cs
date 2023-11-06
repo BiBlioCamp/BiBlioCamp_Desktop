@@ -267,7 +267,7 @@
             this.Controls.Add(this.dgwLivros);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultarAtualizarLivro";
-            this.Text = "Consultar ou Atualizar Livro";
+            this.Text = "Consultar ou atualizar livro";
             ((System.ComponentModel.ISupportInitialize)(this.dgwLivros)).EndInit();
             this.gpbAtualizar.ResumeLayout(false);
             this.gpbAtualizar.PerformLayout();

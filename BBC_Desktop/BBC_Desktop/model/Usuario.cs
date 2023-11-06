@@ -61,5 +61,28 @@ namespace BBC_Desktop.model
             }
             return consulta;
         }
+
+        public bool alterarSenha()
+        {
+            bool alterou = false;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand altera = new MySqlCommand("update BBC_User set senha = '" + senha + "' where username = '"
+                    + username + "'", Conexao.con);
+                altera.ExecuteNonQuery();
+                alterou = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+            
+            return alterou;
+        }
     }
 }

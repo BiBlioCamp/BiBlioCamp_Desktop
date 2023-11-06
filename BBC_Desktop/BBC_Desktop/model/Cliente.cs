@@ -24,6 +24,25 @@ namespace BBC_Desktop.model
             this.Foto = foto;
         }
 
+        public Cliente(int ra, string nome, string email, string telefone)
+        {
+            this.Email = email;
+            this.Nome = nome;
+            this.Telefone = telefone;
+            this.Ra = ra;
+        }
+
+        public Cliente(int ra, string senha)
+        {
+            this.Senha = senha;
+            this.Ra = ra;
+        }
+
+        public Cliente()
+        {
+
+        }
+
         public string Email { get => email; set => email = value; }
         public string Senha { get => senha; set => senha = value; }
         public string Nome { get => nome; set => nome = value; }
@@ -48,6 +67,95 @@ namespace BBC_Desktop.model
                 Conexao.con.Close();
             }
             return cadastro;
+        }
+
+        public bool consultarCliente()
+        {
+            bool achou = false;
+            MySqlDataReader resultado;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("select * from BBC_Cliente where ra = " + ra + " and senha = '"
+                    + senha + "'", Conexao.con);
+                resultado = consulta.ExecuteReader();
+                if (resultado.Read())
+                {
+                    achou = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+
+            return achou;
+        }
+
+        public bool alterarSenha()
+        {
+            bool alterou = false;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand altera = new MySqlCommand("update BBC_Cliente set senha = '" + senha + "' where ra = " + ra, Conexao.con);
+                altera.ExecuteNonQuery();
+                alterou = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally 
+            {
+                Conexao.con.Close(); 
+            }
+
+            return alterou;
+        }
+
+        public bool atualizarCliente()
+        {
+            bool atualizou = false;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand atualiza = new MySqlCommand("update BBC_Cliente set nome = '" + nome + "', email = '" + email + 
+                    "', telefone = '" + telefone + "' where ra = " + ra, Conexao.con);
+                atualiza.ExecuteNonQuery();
+                atualizou = true;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+
+            return atualizou;
+        }
+
+        public MySqlDataReader consultaTodosClientes()
+        {
+            MySqlDataReader resultado = null;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("select * from BBC_Cliente", Conexao.con);
+                resultado = consulta.ExecuteReader();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            return resultado;
         }
     }
 }

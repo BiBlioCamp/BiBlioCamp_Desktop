@@ -50,6 +50,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Livro.cs" />
+    <Compile Include="view\frmAlterarSenhaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmAlterarSenhaUsuario.Designer.cs">
+      <DependentUpon>frmAlterarSenhaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmAlterarSenhaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmAlterarSenhaCliente.Designer.cs">
+      <DependentUpon>frmAlterarSenhaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmConsultarAtualizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmConsultarAtualizarCliente.Designer.cs">
+      <DependentUpon>frmConsultarAtualizarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmConsultarAtualizarLivro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +103,15 @@
     <Compile Include="view\frmCadastrarLivro.Designer.cs">
       <DependentUpon>frmCadastrarLivro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\frmAlterarSenhaUsuario.resx">
+      <DependentUpon>frmAlterarSenhaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmAlterarSenhaCliente.resx">
+      <DependentUpon>frmAlterarSenhaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmConsultarAtualizarCliente.resx">
+      <DependentUpon>frmConsultarAtualizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmConsultarAtualizarLivro.resx">
       <DependentUpon>frmConsultarAtualizarLivro.cs</DependentUpon>
     </EmbeddedResource>

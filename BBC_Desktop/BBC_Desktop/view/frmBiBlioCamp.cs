@@ -81,5 +81,26 @@ namespace BBC_Desktop
             conAttLivro.MdiParent = this;
             conAttLivro.Show();
         }
+
+        private void lblSenha_Click(object sender, EventArgs e)
+        {
+            frmAlterarSenhaUsuario alterarSenha = new frmAlterarSenhaUsuario();
+            alterarSenha.MdiParent = this;
+            alterarSenha.Show();
+        }
+
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarAtualizarCliente consultaAltera = new frmConsultarAtualizarCliente();
+            consultaAltera.MdiParent = this;
+            consultaAltera.Show();
+        }
+
+        private void alterarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarAtualizarCliente consultaAltera = new frmConsultarAtualizarCliente();
+            consultaAltera.MdiParent = this;
+            consultaAltera.Show();
+        }
     }
 }
