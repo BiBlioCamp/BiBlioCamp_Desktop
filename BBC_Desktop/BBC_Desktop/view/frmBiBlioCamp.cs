@@ -25,28 +25,6 @@ namespace BBC_Desktop
             mspBiBliocamp.Enabled = false;
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Usuario usuario = new Usuario(txtUsername.Text, txtSenha.Text);
-                if (usuario.consultarUsuario())
-                {
-                    //MessageBox.Show("Bem vindo " + txtUsername.Text + "!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    gpbLogin.Visible = false;
-                    mspBiBliocamp.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("Senha ou usuário incorreto!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-        }
-
         private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadastrarCliente cadastrarCliente = new frmCadastrarCliente();
@@ -101,6 +79,28 @@ namespace BBC_Desktop
             frmConsultarAtualizarCliente consultaAltera = new frmConsultarAtualizarCliente();
             consultaAltera.MdiParent = this;
             consultaAltera.Show();
+        }
+
+        private void btnEntrar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Usuario usuario = new Usuario(txtUsername.Text, txtSenha.Text);
+                if (usuario.consultarUsuario())
+                {
+                    //MessageBox.Show("Bem vindo " + txtUsername.Text + "!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    gpbLogin.Visible = false;
+                    mspBiBliocamp.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Senha ou usuário incorreto!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

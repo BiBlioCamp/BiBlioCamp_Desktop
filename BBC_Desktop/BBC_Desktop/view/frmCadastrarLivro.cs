@@ -20,6 +20,8 @@ namespace BBC_Desktop.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarLivro));
+
             if (ConverterFoto() != null && txtAutor.Text != "" && txtEditora.Text != "" && txtTitulo.Text != "" && mkdData.Text != ""
                 && cbbClasse.Text != "")
             {
@@ -30,6 +32,7 @@ namespace BBC_Desktop.view
                 {
                     MessageBox.Show("Livro cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);
                     limpar();
+                    ptbFoto.Image = ((System.Drawing.Image)(resources.GetObject("ptbFoto.Image")));
                 }
                 else
                 {

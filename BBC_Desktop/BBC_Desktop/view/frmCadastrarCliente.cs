@@ -21,6 +21,8 @@ namespace BBC_Desktop.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarCliente));
+
             if (ConverterFoto() != null && txtEmail.Text != "" && txtNome.Text != "" && txtRa.Text != "")
             {
                 byte[] foto = ConverterFoto();
@@ -31,6 +33,7 @@ namespace BBC_Desktop.view
                 {
                     MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);
                     limpar();
+                    ptbFoto.Image = ((System.Drawing.Image)(resources.GetObject("ptbFoto.Image")));
                 }
                 else
                 {
