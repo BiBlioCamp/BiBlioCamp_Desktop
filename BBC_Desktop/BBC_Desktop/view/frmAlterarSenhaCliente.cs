@@ -27,15 +27,22 @@ namespace BBC_Desktop.view
                     Cliente cliente = new Cliente(int.Parse(txtRa.Text), txtSenha.Text);
                     if (cliente.consultarCliente() == false)
                     {
-                        if (cliente.alterarSenha())
+                        if (cliente.consultarExistencia())
                         {
-                            MessageBox.Show("Senha alterada com sucesso!", "Sucesso", MessageBoxButtons.OK);
-                            limpar();
-                            this.Close();
+                            if (cliente.alterarSenha())
+                            {
+                                MessageBox.Show("Senha alterada com sucesso!", "Sucesso", MessageBoxButtons.OK);
+                                limpar();
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Falha ao alterar senha!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Falha ao alterar senha!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Esse cliente não existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
@@ -59,6 +66,15 @@ namespace BBC_Desktop.view
             txtConfirmarSenha.Text = "";
             txtSenha.Text = "";
             txtRa.Text = "";
+        }
+
+        private void txtRa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                //Atribui True no Handled para cancelar o evento
+                e.Handled = true;
+            }
         }
     }
 }

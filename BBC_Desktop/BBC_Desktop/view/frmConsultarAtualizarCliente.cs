@@ -92,5 +92,29 @@ namespace BBC_Desktop.view
             txtNome.Text = "";
             mkdTelefone.Text = "";
         }
+
+        private void txtBuscarNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cliente cliente = new Cliente(txtBuscarNome.Text);
+            MySqlDataReader rCliente;
+            try
+            {
+                rCliente = cliente.consultarNome();
+
+                dgwCliente.Rows.Clear();
+                while (rCliente.Read())
+                {
+                    dgwCliente.Rows.Add(rCliente["ra"].ToString(), rCliente["nome"].ToString(), rCliente["email"].ToString(), rCliente["telefone"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+        }
     }
 }

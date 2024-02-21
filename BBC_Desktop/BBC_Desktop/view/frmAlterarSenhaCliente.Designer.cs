@@ -115,6 +115,7 @@
             this.txtRa.Name = "txtRa";
             this.txtRa.Size = new System.Drawing.Size(114, 20);
             this.txtRa.TabIndex = 0;
+            this.txtRa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRa_KeyPress);
             // 
             // frmAlterarSenhaCliente
             // 

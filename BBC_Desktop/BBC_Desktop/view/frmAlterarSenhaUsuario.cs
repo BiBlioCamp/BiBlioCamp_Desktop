@@ -27,15 +27,22 @@ namespace BBC_Desktop.view
                     Usuario usuario = new Usuario(txtUsuario.Text, txtSenha.Text);
                     if (usuario.consultarUsuario() == false)
                     {
-                        if (usuario.alterarSenha())
+                        if (usuario.consultarUser())
                         {
-                            MessageBox.Show("Senha alterada com sucesso!", "Sucesso", MessageBoxButtons.OK);
-                            limpar();
-                            this.Close();
+                            if (usuario.alterarSenha())
+                            {
+                                MessageBox.Show("Senha alterada com sucesso!", "Sucesso", MessageBoxButtons.OK);
+                                limpar();
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Falha ao alterar senha!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Falha ao alterar senha!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Esse usuário não existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else

@@ -74,6 +74,26 @@ namespace BBC_Desktop.model
             return consulta;
         }
 
+        public bool consultarUser()
+        {
+            bool consulta = false;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consultar = new MySqlCommand("select * from BBC_User where username = '" + username + "'", Conexao.con);
+                MySqlDataReader resultado = consultar.ExecuteReader();
+                if (resultado.Read())
+                {
+                    consulta = true;
+                }
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+            return consulta;
+        }
+
         public MySqlDataReader consultarUsername()
         {
             MySqlDataReader resultado = null;

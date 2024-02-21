@@ -42,6 +42,10 @@ namespace BBC_Desktop.model
         {
 
         }
+        public Cliente(string nome)
+        {
+            this.nome = nome;
+        }
 
         public string Email { get => email; set => email = value; }
         public string Senha { get => senha; set => senha = value; }
@@ -78,6 +82,32 @@ namespace BBC_Desktop.model
                 Conexao.con.Open();
                 MySqlCommand consulta = new MySqlCommand("select * from BBC_Cliente where ra = " + ra + " and senha = '"
                     + senha + "'", Conexao.con);
+                resultado = consulta.ExecuteReader();
+                if (resultado.Read())
+                {
+                    achou = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+
+            return achou;
+        }
+
+        public bool consultarExistencia()
+        {
+            bool achou = false;
+            MySqlDataReader resultado;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("select * from BBC_Cliente where ra = " + ra, Conexao.con);
                 resultado = consulta.ExecuteReader();
                 if (resultado.Read())
                 {
@@ -151,6 +181,24 @@ namespace BBC_Desktop.model
                 resultado = consulta.ExecuteReader();
             }
             catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            return resultado;
+        }
+
+        public MySqlDataReader consultarNome()
+        {
+            MySqlDataReader resultado = null;
+
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("select * from BBC_Cliente where nome like '%" + nome + "%'", Conexao.con);
+                resultado = consulta.ExecuteReader();
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

@@ -43,6 +43,8 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscarNome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
             this.gpbAtualizar.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +58,7 @@
             this.Column1,
             this.Email,
             this.Column2});
-            this.dgwCliente.Location = new System.Drawing.Point(21, 12);
+            this.dgwCliente.Location = new System.Drawing.Point(21, 39);
             this.dgwCliente.MultiSelect = false;
             this.dgwCliente.Name = "dgwCliente";
             this.dgwCliente.ReadOnly = true;
@@ -99,7 +101,7 @@
             this.gpbAtualizar.Controls.Add(this.txtEmail);
             this.gpbAtualizar.Controls.Add(this.txtNome);
             this.gpbAtualizar.Controls.Add(this.label2);
-            this.gpbAtualizar.Location = new System.Drawing.Point(12, 132);
+            this.gpbAtualizar.Location = new System.Drawing.Point(12, 159);
             this.gpbAtualizar.Name = "gpbAtualizar";
             this.gpbAtualizar.Size = new System.Drawing.Size(464, 131);
             this.gpbAtualizar.TabIndex = 2;
@@ -176,11 +178,30 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome:";
             // 
+            // txtBuscarNome
+            // 
+            this.txtBuscarNome.Location = new System.Drawing.Point(62, 13);
+            this.txtBuscarNome.Name = "txtBuscarNome";
+            this.txtBuscarNome.Size = new System.Drawing.Size(403, 20);
+            this.txtBuscarNome.TabIndex = 9;
+            this.txtBuscarNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarNome_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Nome:";
+            // 
             // frmConsultarAtualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 275);
+            this.ClientSize = new System.Drawing.Size(491, 303);
+            this.Controls.Add(this.txtBuscarNome);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbAtualizar);
             this.Controls.Add(this.dgwCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -190,6 +211,7 @@
             this.gpbAtualizar.ResumeLayout(false);
             this.gpbAtualizar.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -208,5 +230,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.TextBox txtBuscarNome;
+        private System.Windows.Forms.Label label1;
     }
 }
