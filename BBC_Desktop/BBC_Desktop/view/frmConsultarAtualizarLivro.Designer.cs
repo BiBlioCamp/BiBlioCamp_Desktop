@@ -48,6 +48,8 @@
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarTitulo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwLivros)).BeginInit();
             this.gpbAtualizar.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +64,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgwLivros.Location = new System.Drawing.Point(12, 14);
+            this.dgwLivros.Location = new System.Drawing.Point(12, 38);
             this.dgwLivros.MultiSelect = false;
             this.dgwLivros.Name = "dgwLivros";
             this.dgwLivros.ReadOnly = true;
@@ -115,7 +117,7 @@
             this.gpbAtualizar.Controls.Add(this.txtEditora);
             this.gpbAtualizar.Controls.Add(this.txtAutor);
             this.gpbAtualizar.Controls.Add(this.txtTitulo);
-            this.gpbAtualizar.Location = new System.Drawing.Point(12, 195);
+            this.gpbAtualizar.Location = new System.Drawing.Point(12, 219);
             this.gpbAtualizar.Name = "gpbAtualizar";
             this.gpbAtualizar.Size = new System.Drawing.Size(544, 213);
             this.gpbAtualizar.TabIndex = 3;
@@ -258,12 +260,31 @@
             this.txtTitulo.Size = new System.Drawing.Size(322, 20);
             this.txtTitulo.TabIndex = 12;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Titulo:";
+            // 
+            // txtBuscarTitulo
+            // 
+            this.txtBuscarTitulo.Location = new System.Drawing.Point(54, 12);
+            this.txtBuscarTitulo.Name = "txtBuscarTitulo";
+            this.txtBuscarTitulo.Size = new System.Drawing.Size(502, 20);
+            this.txtBuscarTitulo.TabIndex = 24;
+            this.txtBuscarTitulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarTitulo_KeyPress);
+            // 
             // frmConsultarAtualizarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 418);
+            this.ClientSize = new System.Drawing.Size(569, 444);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbAtualizar);
+            this.Controls.Add(this.txtBuscarTitulo);
             this.Controls.Add(this.dgwLivros);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultarAtualizarLivro";
@@ -272,6 +293,7 @@
             this.gpbAtualizar.ResumeLayout(false);
             this.gpbAtualizar.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -296,5 +318,7 @@
         private System.Windows.Forms.TextBox txtEditora;
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBuscarTitulo;
     }
 }

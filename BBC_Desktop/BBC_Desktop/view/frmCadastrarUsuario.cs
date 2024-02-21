@@ -20,11 +20,11 @@ namespace BBC_Desktop
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtSenha.Text != "" && txtConfirmarSenha.Text != "" && txtUsername.Text != "")
+            if (txtSenha.Text != "" && txtConfirmarSenha.Text != "" && txtUsername.Text != "" && txtEmail.Text != "")
             {
                 if (txtSenha.Text == txtConfirmarSenha.Text)
                 {
-                    Usuario user = new Usuario(txtUsername.Text, txtSenha.Text);
+                    Usuario user = new Usuario(txtUsername.Text, txtSenha.Text, txtEmail.Text);
                     if (user.cadastrarUsuario())
                     {
                         MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);
@@ -51,6 +51,7 @@ namespace BBC_Desktop
             txtUsername.Text = "";
             txtSenha.Text = "";
             txtConfirmarSenha.Text = "";
+            txtEmail.Text = "";
         }
     }
 }

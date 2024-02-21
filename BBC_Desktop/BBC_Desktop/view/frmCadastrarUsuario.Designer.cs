@@ -37,11 +37,15 @@
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.gpbInformacoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbInformacoes
             // 
+            this.gpbInformacoes.Controls.Add(this.label4);
+            this.gpbInformacoes.Controls.Add(this.txtEmail);
             this.gpbInformacoes.Controls.Add(this.btnCadastrar);
             this.gpbInformacoes.Controls.Add(this.label3);
             this.gpbInformacoes.Controls.Add(this.label2);
@@ -58,7 +62,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(17, 150);
+            this.btnCadastrar.Location = new System.Drawing.Point(17, 140);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(288, 23);
             this.btnCadastrar.TabIndex = 6;
@@ -69,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 118);
+            this.label3.Location = new System.Drawing.Point(14, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 5;
@@ -78,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 78);
+            this.label2.Location = new System.Drawing.Point(14, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 4;
@@ -95,7 +99,7 @@
             // 
             // txtConfirmarSenha
             // 
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(106, 115);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(106, 114);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.PasswordChar = '*';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(199, 20);
@@ -103,7 +107,7 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(78, 75);
+            this.txtSenha.Location = new System.Drawing.Point(78, 88);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(227, 20);
@@ -115,6 +119,22 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(227, 20);
             this.txtUsername.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(78, 62);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(227, 20);
+            this.txtEmail.TabIndex = 7;
             // 
             // frmCadastrarUsuario
             // 
@@ -141,5 +161,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

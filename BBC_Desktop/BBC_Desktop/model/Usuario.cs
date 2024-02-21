@@ -10,12 +10,20 @@ namespace BBC_Desktop.model
 {
     internal class Usuario
     {
-        private string username, senha;
+        private string username, senha, email;
 
         public string Username { get => username; set => username = value; }
         public string Senha { get => senha; set => senha = value; }
+        public string Email { get => email; set => email = value; }
 
         public Usuario() { }
+
+        public Usuario(string username, string senha, string email)
+        {
+            Username = username;
+            Senha = senha;
+            Email = email;
+        }
 
         public Usuario(string username, string senha)
         {
@@ -29,8 +37,8 @@ namespace BBC_Desktop.model
             try
             {
                 Conexao.con.Open();
-                MySqlCommand cadastrar = new MySqlCommand("insert into BBC_User (username, senha) values ('" +
-                    username + "', '" + senha + "')", Conexao.con);
+                MySqlCommand cadastrar = new MySqlCommand("insert into BBC_User (username, senha, email) values ('" +
+                    username + "', '" + senha + "','" + email + "')", Conexao.con);
                 cadastrar.ExecuteNonQuery();
                 cadastro = true;
             }
@@ -83,6 +91,46 @@ namespace BBC_Desktop.model
             }
             
             return alterou;
+        }
+
+        public bool atualizarUsuario()
+        {
+            bool alterou = false;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand altera = new MySqlCommand("update BBC_User set username = '" + senha + "', email = '" + email + 
+                    "' where username = '" + username + "'", Conexao.con);
+                altera.ExecuteNonQuery();
+                alterou = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+
+            return alterou;
+        }
+
+        public MySqlDataReader consultaTodosUsuarios()
+        {
+            MySqlDataReader resultado = null;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("select * from BBC_User", Conexao.con);
+                resultado = consulta.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            return resultado;
         }
     }
 }

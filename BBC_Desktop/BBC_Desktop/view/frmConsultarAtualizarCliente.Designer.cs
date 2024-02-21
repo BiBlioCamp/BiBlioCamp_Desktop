@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarAtualizarCliente));
             this.dgwCliente = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbAtualizar = new System.Windows.Forms.GroupBox();
             this.lblAlterarSenha = new System.Windows.Forms.Label();
             this.btnAtualizar = new System.Windows.Forms.Button();
@@ -39,10 +43,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
             this.gpbAtualizar.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,30 @@
             this.dgwCliente.Size = new System.Drawing.Size(444, 114);
             this.dgwCliente.TabIndex = 1;
             this.dgwCliente.SelectionChanged += new System.EventHandler(this.dgwCliente_SelectionChanged);
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "RA";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Telefone";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // gpbAtualizar
             // 
@@ -152,35 +176,11 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome:";
             // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "RA";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Telefone";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
             // frmConsultarAtualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 275);
+            this.ClientSize = new System.Drawing.Size(491, 275);
             this.Controls.Add(this.gpbAtualizar);
             this.Controls.Add(this.dgwCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

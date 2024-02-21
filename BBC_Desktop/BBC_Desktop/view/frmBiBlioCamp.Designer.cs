@@ -48,6 +48,8 @@ namespace BBC_Desktop
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblAdmin = new System.Windows.Forms.Label();
+            this.consultarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mspBiBliocamp.SuspendLayout();
             this.gpbLogin.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,9 @@ namespace BBC_Desktop
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarUsuárioToolStripMenuItem});
+            this.cadastrarUsuárioToolStripMenuItem,
+            this.consultarUsuárioToolStripMenuItem,
+            this.atualizarUsuárioToolStripMenuItem});
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.usuárioToolStripMenuItem.Text = "Usuário";
@@ -107,7 +111,7 @@ namespace BBC_Desktop
             // 
             this.alterarClienteToolStripMenuItem.Name = "alterarClienteToolStripMenuItem";
             this.alterarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.alterarClienteToolStripMenuItem.Text = "Alterar Cliente";
+            this.alterarClienteToolStripMenuItem.Text = "Atualizar Cliente";
             this.alterarClienteToolStripMenuItem.Click += new System.EventHandler(this.alterarClienteToolStripMenuItem_Click);
             // 
             // livroToolStripMenuItem
@@ -168,6 +172,7 @@ namespace BBC_Desktop
             this.lblSenha.Size = new System.Drawing.Size(102, 13);
             this.lblSenha.TabIndex = 5;
             this.lblSenha.Text = "Esqueceu a senha?";
+            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click_1);
             // 
             // btnEntrar
             // 
@@ -222,6 +227,20 @@ namespace BBC_Desktop
             this.lblAdmin.TabIndex = 0;
             this.lblAdmin.Text = "Usuário:";
             // 
+            // consultarUsuárioToolStripMenuItem
+            // 
+            this.consultarUsuárioToolStripMenuItem.Name = "consultarUsuárioToolStripMenuItem";
+            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarUsuárioToolStripMenuItem.Text = "Consultar Usuário";
+            this.consultarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuárioToolStripMenuItem_Click);
+            // 
+            // atualizarUsuárioToolStripMenuItem
+            // 
+            this.atualizarUsuárioToolStripMenuItem.Name = "atualizarUsuárioToolStripMenuItem";
+            this.atualizarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.atualizarUsuárioToolStripMenuItem.Text = "Atualizar Usuário";
+            this.atualizarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.atualizarUsuárioToolStripMenuItem_Click);
+            // 
             // frmBiBliocamp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,6 +283,8 @@ namespace BBC_Desktop
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.ToolStripMenuItem consultarUsuárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarUsuárioToolStripMenuItem;
     }
 }
 

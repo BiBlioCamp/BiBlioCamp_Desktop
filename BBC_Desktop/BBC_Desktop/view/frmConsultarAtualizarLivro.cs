@@ -15,10 +15,15 @@ namespace BBC_Desktop.view
 {
     public partial class frmConsultarAtualizarLivro : Form
     {
-        public frmConsultarAtualizarLivro()
+        public frmConsultarAtualizarLivro(bool consulta)
         {
             InitializeComponent();
             atualizaDataGridView();
+
+            if (consulta)
+            {
+                gpbAtualizar.Enabled = false;
+            }
         }
 
         public void atualizaDataGridView()
@@ -109,6 +114,31 @@ namespace BBC_Desktop.view
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void txtBuscarTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Livro livro = new Livro(txtBuscarTitulo.Text);
+            MySqlDataReader rLivro;
+            try
+            {
+                rLivro = livro.consultarLivro();
+
+                dgwLivros.Rows.Clear();
+                while (rLivro.Read())
+                {
+                    dgwLivros.Rows.Add(rLivro["titulo"].ToString(), rLivro["autor"].ToString(), rLivro["editora"].ToString(),
+                        rLivro["data"].ToString(), rLivro["classificacao"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conexao.con.Close();
             }
         }
     }

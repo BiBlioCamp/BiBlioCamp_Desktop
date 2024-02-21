@@ -48,14 +48,14 @@ namespace BBC_Desktop
 
         private void consultarLivrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultarAtualizarLivro conAttLivro = new frmConsultarAtualizarLivro();
+            frmConsultarAtualizarLivro conAttLivro = new frmConsultarAtualizarLivro(true);
             conAttLivro.MdiParent = this;
             conAttLivro.Show();
         }
 
         private void atualizarLivroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultarAtualizarLivro conAttLivro = new frmConsultarAtualizarLivro();
+            frmConsultarAtualizarLivro conAttLivro = new frmConsultarAtualizarLivro(false);
             conAttLivro.MdiParent = this;
             conAttLivro.Show();
         }
@@ -69,14 +69,14 @@ namespace BBC_Desktop
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultarAtualizarCliente consultaAltera = new frmConsultarAtualizarCliente();
+            frmConsultarAtualizarCliente consultaAltera = new frmConsultarAtualizarCliente(true);
             consultaAltera.MdiParent = this;
             consultaAltera.Show();
         }
 
         private void alterarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultarAtualizarCliente consultaAltera = new frmConsultarAtualizarCliente();
+            frmConsultarAtualizarCliente consultaAltera = new frmConsultarAtualizarCliente(false);
             consultaAltera.MdiParent = this;
             consultaAltera.Show();
         }
@@ -101,6 +101,27 @@ namespace BBC_Desktop
             {
                 Console.WriteLine(ex.ToString());
             }
+        }
+
+        private void lblSenha_Click_1(object sender, EventArgs e)
+        {
+            frmAlterarSenhaUsuario frmAlter = new frmAlterarSenhaUsuario();
+            frmAlter.MdiParent = this;
+            frmAlter.Show();
+        }
+
+        private void consultarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarAtualizarUsuario frmAlter = new frmConsultarAtualizarUsuario(true);
+            frmAlter.MdiParent = this;
+            frmAlter.Show();
+        }
+
+        private void atualizarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarAtualizarUsuario frmAlter = new frmConsultarAtualizarUsuario(false);
+            frmAlter.MdiParent = this;
+            frmAlter.Show();
         }
     }
 }

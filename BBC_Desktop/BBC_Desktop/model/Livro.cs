@@ -46,6 +46,10 @@ namespace BBC_Desktop.model
         public Livro()
         {
         }
+        public Livro(string titulo)
+        {
+            this.titulo = titulo;
+        }
 
         public string Titulo { get => titulo; set => titulo = value; }
         public string Autor { get => autor; set => autor = value; }
@@ -146,6 +150,23 @@ namespace BBC_Desktop.model
             }
 
             return id;
+        }
+
+        public MySqlDataReader consultarLivro()
+        {
+            MySqlDataReader consulta = null;
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consultar = new MySqlCommand("select * from BBC_Livro where titulo like '%" + titulo + "%'", Conexao.con);
+                consulta = consultar.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            return consulta;
         }
     }
 }

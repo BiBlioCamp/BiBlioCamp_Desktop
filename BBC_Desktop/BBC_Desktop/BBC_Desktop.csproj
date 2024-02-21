@@ -103,6 +103,12 @@
     <Compile Include="view\frmCadastrarLivro.Designer.cs">
       <DependentUpon>frmCadastrarLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmConsultarAtualizarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmConsultarAtualizarUsuario.Designer.cs">
+      <DependentUpon>frmConsultarAtualizarUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="view\frmAlterarSenhaUsuario.resx">
       <DependentUpon>frmAlterarSenhaUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmBiBlioCamp.resx">
       <DependentUpon>frmBiBlioCamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmConsultarAtualizarUsuario.resx">
+      <DependentUpon>frmConsultarAtualizarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

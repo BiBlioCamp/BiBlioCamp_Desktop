@@ -15,10 +15,15 @@ namespace BBC_Desktop.view
 {
     public partial class frmConsultarAtualizarCliente : Form
     {
-        public frmConsultarAtualizarCliente()
+        public frmConsultarAtualizarCliente(bool consulta)
         {
             InitializeComponent();
             atualizaDataGridView();
+
+            if (consulta)
+            {
+                gpbAtualizar.Enabled = false;
+            }
         }
 
         private void atualizaDataGridView()
