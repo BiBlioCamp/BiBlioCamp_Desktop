@@ -30,8 +30,6 @@ namespace BBC_Desktop.view
         private void InitializeComponent()
         {
             this.dgwUsuario = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -42,6 +40,8 @@ namespace BBC_Desktop.view
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscaUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,21 +58,9 @@ namespace BBC_Desktop.view
             this.dgwUsuario.Name = "dgwUsuario";
             this.dgwUsuario.ReadOnly = true;
             this.dgwUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwUsuario.Size = new System.Drawing.Size(259, 131);
+            this.dgwUsuario.Size = new System.Drawing.Size(369, 131);
             this.dgwUsuario.TabIndex = 3;
             this.dgwUsuario.SelectionChanged += new System.EventHandler(this.dgwUsuario_SelectionChanged);
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Username";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -82,7 +70,7 @@ namespace BBC_Desktop.view
             this.groupBox1.Controls.Add(this.btnAtualizar);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(277, 12);
+            this.groupBox1.Location = new System.Drawing.Point(407, 15);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(312, 160);
             this.groupBox1.TabIndex = 4;
@@ -146,7 +134,7 @@ namespace BBC_Desktop.view
             // 
             this.txtBuscaUser.Location = new System.Drawing.Point(76, 12);
             this.txtBuscaUser.Name = "txtBuscaUser";
-            this.txtBuscaUser.Size = new System.Drawing.Size(195, 20);
+            this.txtBuscaUser.Size = new System.Drawing.Size(305, 20);
             this.txtBuscaUser.TabIndex = 10;
             this.txtBuscaUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscaUser_KeyPress);
             // 
@@ -159,11 +147,25 @@ namespace BBC_Desktop.view
             this.label3.TabIndex = 9;
             this.label3.Text = "Username:";
             // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Username";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.FillWeight = 1000F;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 200;
+            // 
             // frmConsultarAtualizarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 181);
+            this.ClientSize = new System.Drawing.Size(729, 181);
             this.Controls.Add(this.txtBuscaUser);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
@@ -186,11 +188,11 @@ namespace BBC_Desktop.view
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscaUser;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }
