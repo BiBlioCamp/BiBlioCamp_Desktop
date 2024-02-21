@@ -99,5 +99,29 @@ namespace BBC_Desktop.view
             string email = dgwUsuario.SelectedRows[0].Cells[1].Value.ToString();
             txtEmail.Text = email;
         }
+
+        private void txtBuscaUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Usuario user = new Usuario(txtBuscaUser.Text);
+            MySqlDataReader rUser;
+            try
+            {
+                rUser = user.consultarUsername();
+
+                dgwUsuario.Rows.Clear();
+                while (rUser.Read())
+                {
+                    dgwUsuario.Rows.Add(rUser["username"].ToString(), rUser["email"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conexao.con.Close();
+            }
+        }
     }
 }

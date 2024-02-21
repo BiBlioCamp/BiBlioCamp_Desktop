@@ -30,16 +30,18 @@ namespace BBC_Desktop.view
         private void InitializeComponent()
         {
             this.dgwUsuario = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.btnAtualizar = new System.Windows.Forms.Button();
-            this.lblSenha = new System.Windows.Forms.Label();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscaUser = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +53,7 @@ namespace BBC_Desktop.view
             this.dgwUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.email});
-            this.dgwUsuario.Location = new System.Drawing.Point(12, 12);
+            this.dgwUsuario.Location = new System.Drawing.Point(12, 41);
             this.dgwUsuario.MultiSelect = false;
             this.dgwUsuario.Name = "dgwUsuario";
             this.dgwUsuario.ReadOnly = true;
@@ -59,58 +61,6 @@ namespace BBC_Desktop.view
             this.dgwUsuario.Size = new System.Drawing.Size(259, 131);
             this.dgwUsuario.TabIndex = 3;
             this.dgwUsuario.SelectionChanged += new System.EventHandler(this.dgwUsuario_SelectionChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lblSenha);
-            this.groupBox1.Controls.Add(this.btnAtualizar);
-            this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(294, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(312, 131);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informações para atualizar";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username:";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(70, 29);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(236, 20);
-            this.txtUsername.TabIndex = 1;
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Location = new System.Drawing.Point(9, 81);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(297, 23);
-            this.btnAtualizar.TabIndex = 2;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click_1);
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(237, 108);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(69, 13);
-            this.lblSenha.TabIndex = 6;
-            this.lblSenha.Text = "Alterar senha";
-            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click);
             // 
             // Column3
             // 
@@ -123,6 +73,21 @@ namespace BBC_Desktop.view
             this.email.HeaderText = "Email";
             this.email.Name = "email";
             this.email.ReadOnly = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblSenha);
+            this.groupBox1.Controls.Add(this.btnAtualizar);
+            this.groupBox1.Controls.Add(this.txtUsername);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(277, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(312, 160);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informações para atualizar";
             // 
             // txtEmail
             // 
@@ -140,11 +105,67 @@ namespace BBC_Desktop.view
             this.label2.TabIndex = 7;
             this.label2.Text = "Email:";
             // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(237, 108);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(69, 13);
+            this.lblSenha.TabIndex = 6;
+            this.lblSenha.Text = "Alterar senha";
+            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(9, 81);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(297, 23);
+            this.btnAtualizar.TabIndex = 2;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click_1);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(70, 29);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(236, 20);
+            this.txtUsername.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Username:";
+            // 
+            // txtBuscaUser
+            // 
+            this.txtBuscaUser.Location = new System.Drawing.Point(76, 12);
+            this.txtBuscaUser.Name = "txtBuscaUser";
+            this.txtBuscaUser.Size = new System.Drawing.Size(195, 20);
+            this.txtBuscaUser.TabIndex = 10;
+            this.txtBuscaUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscaUser_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Username:";
+            // 
             // frmConsultarAtualizarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 156);
+            this.ClientSize = new System.Drawing.Size(600, 181);
+            this.Controls.Add(this.txtBuscaUser);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgwUsuario);
             this.Name = "frmConsultarAtualizarUsuario";
@@ -153,6 +174,7 @@ namespace BBC_Desktop.view
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -168,5 +190,7 @@ namespace BBC_Desktop.view
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBuscaUser;
+        private System.Windows.Forms.Label label3;
     }
 }

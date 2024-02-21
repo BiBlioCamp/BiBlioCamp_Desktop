@@ -18,6 +18,10 @@ namespace BBC_Desktop.model
 
         public Usuario() { }
 
+        public Usuario(string username) {
+            Username = username;
+        }
+
         public Usuario(string username, string senha, string email)
         {
             Username = username;
@@ -68,6 +72,24 @@ namespace BBC_Desktop.model
                 Conexao.con.Close();
             }
             return consulta;
+        }
+
+        public MySqlDataReader consultarUsername()
+        {
+            MySqlDataReader resultado = null;
+
+            try
+            {
+                Conexao.con.Open();
+                MySqlCommand consultar = new MySqlCommand("select * from BBC_User where username like '%" + username + "%'", Conexao.con);
+                resultado = consultar.ExecuteReader();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return resultado;
         }
 
         public bool alterarSenha()
