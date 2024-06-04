@@ -33,6 +33,8 @@ namespace BBC_Desktop
             this.mspBiBliocamp = new System.Windows.Forms.MenuStrip();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +50,6 @@ namespace BBC_Desktop
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblAdmin = new System.Windows.Forms.Label();
-            this.consultarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.atualizarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mspBiBliocamp.SuspendLayout();
             this.gpbLogin.SuspendLayout();
             this.SuspendLayout();
@@ -79,9 +79,23 @@ namespace BBC_Desktop
             // cadastrarUsuárioToolStripMenuItem
             // 
             this.cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
-            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
             this.cadastrarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarUsuárioToolStripMenuItem_Click);
+            // 
+            // consultarUsuárioToolStripMenuItem
+            // 
+            this.consultarUsuárioToolStripMenuItem.Name = "consultarUsuárioToolStripMenuItem";
+            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.consultarUsuárioToolStripMenuItem.Text = "Consultar Usuário";
+            this.consultarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuárioToolStripMenuItem_Click);
+            // 
+            // atualizarUsuárioToolStripMenuItem
+            // 
+            this.atualizarUsuárioToolStripMenuItem.Name = "atualizarUsuárioToolStripMenuItem";
+            this.atualizarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.atualizarUsuárioToolStripMenuItem.Text = "Atualizar Usuário";
+            this.atualizarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.atualizarUsuárioToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -96,21 +110,21 @@ namespace BBC_Desktop
             // cadastrarClienteToolStripMenuItem
             // 
             this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
-            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente";
             this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
             // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Cliente";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
             // alterarClienteToolStripMenuItem
             // 
             this.alterarClienteToolStripMenuItem.Name = "alterarClienteToolStripMenuItem";
-            this.alterarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.alterarClienteToolStripMenuItem.Text = "Atualizar Cliente";
             this.alterarClienteToolStripMenuItem.Click += new System.EventHandler(this.alterarClienteToolStripMenuItem_Click);
             // 
@@ -127,21 +141,21 @@ namespace BBC_Desktop
             // cadastroDeLivroToolStripMenuItem
             // 
             this.cadastroDeLivroToolStripMenuItem.Name = "cadastroDeLivroToolStripMenuItem";
-            this.cadastroDeLivroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroDeLivroToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.cadastroDeLivroToolStripMenuItem.Text = "Cadastrar Livro";
             this.cadastroDeLivroToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeLivroToolStripMenuItem_Click);
             // 
             // consultarLivrosToolStripMenuItem
             // 
             this.consultarLivrosToolStripMenuItem.Name = "consultarLivrosToolStripMenuItem";
-            this.consultarLivrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarLivrosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.consultarLivrosToolStripMenuItem.Text = "Consultar Livros";
             this.consultarLivrosToolStripMenuItem.Click += new System.EventHandler(this.consultarLivrosToolStripMenuItem_Click);
             // 
             // atualizarLivroToolStripMenuItem
             // 
             this.atualizarLivroToolStripMenuItem.Name = "atualizarLivroToolStripMenuItem";
-            this.atualizarLivroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.atualizarLivroToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.atualizarLivroToolStripMenuItem.Text = "Atualizar Livro";
             this.atualizarLivroToolStripMenuItem.Click += new System.EventHandler(this.atualizarLivroToolStripMenuItem_Click);
             // 
@@ -192,7 +206,7 @@ namespace BBC_Desktop
             this.label1.Location = new System.Drawing.Point(71, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 3;
             this.label1.Tag = "";
             this.label1.Text = "Senha:";
@@ -214,7 +228,7 @@ namespace BBC_Desktop
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(220, 20);
             this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "B1nair3";
+            this.txtUsername.Text = "Carrilho";
             // 
             // lblAdmin
             // 
@@ -223,23 +237,9 @@ namespace BBC_Desktop
             this.lblAdmin.Location = new System.Drawing.Point(63, 65);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(58, 16);
+            this.lblAdmin.Size = new System.Drawing.Size(57, 16);
             this.lblAdmin.TabIndex = 0;
             this.lblAdmin.Text = "Usuário:";
-            // 
-            // consultarUsuárioToolStripMenuItem
-            // 
-            this.consultarUsuárioToolStripMenuItem.Name = "consultarUsuárioToolStripMenuItem";
-            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarUsuárioToolStripMenuItem.Text = "Consultar Usuário";
-            this.consultarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuárioToolStripMenuItem_Click);
-            // 
-            // atualizarUsuárioToolStripMenuItem
-            // 
-            this.atualizarUsuárioToolStripMenuItem.Name = "atualizarUsuárioToolStripMenuItem";
-            this.atualizarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.atualizarUsuárioToolStripMenuItem.Text = "Atualizar Usuário";
-            this.atualizarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.atualizarUsuárioToolStripMenuItem_Click);
             // 
             // frmBiBliocamp
             // 

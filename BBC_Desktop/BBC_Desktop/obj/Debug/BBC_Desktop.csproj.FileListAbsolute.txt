@@ -11,7 +11,6 @@ C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\De
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.Properties.Resources.resources
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.csproj.GenerateResource.cache
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.csproj.CopyComplete
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.exe
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.pdb
 C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.view.frmCadastrarCliente.resources
@@ -71,3 +70,5 @@ C:\Users\aluno\Documents\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BB
 C:\Users\aluno\Documents\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.exe
 C:\Users\aluno\Documents\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.pdb
 C:\Users\aluno\Documents\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.view.frmConsultarAtualizarUsuario.resources
+C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desktop.view.frmConsultarAtualizarUsuario.resources
+C:\Users\Usuario\Documents\git\BiBlioCamp_Desktop\BBC_Desktop\BBC_Desktop\obj\Debug\BBC_Desk.87FB2D03.Up2Date
