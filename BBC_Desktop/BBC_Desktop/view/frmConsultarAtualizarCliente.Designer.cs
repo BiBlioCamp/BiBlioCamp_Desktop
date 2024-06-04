@@ -52,6 +52,8 @@
             // dgwCliente
             // 
             this.dgwCliente.AllowUserToAddRows = false;
+            this.dgwCliente.BackgroundColor = System.Drawing.Color.White;
+            this.dgwCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -93,6 +95,7 @@
             // 
             // gpbAtualizar
             // 
+            this.gpbAtualizar.BackColor = System.Drawing.Color.White;
             this.gpbAtualizar.Controls.Add(this.lblAlterarSenha);
             this.gpbAtualizar.Controls.Add(this.btnAtualizar);
             this.gpbAtualizar.Controls.Add(this.mkdTelefone);
@@ -189,6 +192,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(18, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
@@ -199,11 +204,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(491, 303);
             this.Controls.Add(this.txtBuscarNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbAtualizar);
             this.Controls.Add(this.dgwCliente);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultarAtualizarCliente";
             this.Text = "Consultar ou atualizar cliente";

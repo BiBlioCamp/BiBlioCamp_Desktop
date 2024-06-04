@@ -57,6 +57,7 @@
             // dgwLivros
             // 
             this.dgwLivros.AllowUserToAddRows = false;
+            this.dgwLivros.BackgroundColor = System.Drawing.Color.White;
             this.dgwLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwLivros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Titulo,
@@ -105,6 +106,7 @@
             // 
             // gpbAtualizar
             // 
+            this.gpbAtualizar.BackColor = System.Drawing.Color.White;
             this.gpbAtualizar.Controls.Add(this.btnAtualizar);
             this.gpbAtualizar.Controls.Add(this.btnLimpar);
             this.gpbAtualizar.Controls.Add(this.label4);
@@ -263,6 +265,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
@@ -281,11 +285,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(569, 444);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbAtualizar);
             this.Controls.Add(this.txtBuscarTitulo);
             this.Controls.Add(this.dgwLivros);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultarAtualizarLivro";
             this.Text = "Consultar ou atualizar livro";

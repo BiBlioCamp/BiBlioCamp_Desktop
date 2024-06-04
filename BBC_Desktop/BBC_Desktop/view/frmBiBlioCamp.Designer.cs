@@ -56,6 +56,7 @@ namespace BBC_Desktop
             // 
             // mspBiBliocamp
             // 
+            this.mspBiBliocamp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.mspBiBliocamp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuárioToolStripMenuItem,
             this.clienteToolStripMenuItem,
@@ -78,22 +79,25 @@ namespace BBC_Desktop
             // 
             // cadastrarUsuárioToolStripMenuItem
             // 
+            this.cadastrarUsuárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
-            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
             this.cadastrarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarUsuárioToolStripMenuItem_Click);
             // 
             // consultarUsuárioToolStripMenuItem
             // 
+            this.consultarUsuárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.consultarUsuárioToolStripMenuItem.Name = "consultarUsuárioToolStripMenuItem";
-            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarUsuárioToolStripMenuItem.Text = "Consultar Usuário";
             this.consultarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuárioToolStripMenuItem_Click);
             // 
             // atualizarUsuárioToolStripMenuItem
             // 
+            this.atualizarUsuárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.atualizarUsuárioToolStripMenuItem.Name = "atualizarUsuárioToolStripMenuItem";
-            this.atualizarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.atualizarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.atualizarUsuárioToolStripMenuItem.Text = "Atualizar Usuário";
             this.atualizarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.atualizarUsuárioToolStripMenuItem_Click);
             // 
@@ -109,22 +113,25 @@ namespace BBC_Desktop
             // 
             // cadastrarClienteToolStripMenuItem
             // 
+            this.cadastrarClienteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
-            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente";
             this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
             // 
             // consultarClienteToolStripMenuItem
             // 
+            this.consultarClienteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Cliente";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
             // alterarClienteToolStripMenuItem
             // 
+            this.alterarClienteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.alterarClienteToolStripMenuItem.Name = "alterarClienteToolStripMenuItem";
-            this.alterarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.alterarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alterarClienteToolStripMenuItem.Text = "Atualizar Cliente";
             this.alterarClienteToolStripMenuItem.Click += new System.EventHandler(this.alterarClienteToolStripMenuItem_Click);
             // 
@@ -140,35 +147,40 @@ namespace BBC_Desktop
             // 
             // cadastroDeLivroToolStripMenuItem
             // 
+            this.cadastroDeLivroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.cadastroDeLivroToolStripMenuItem.Name = "cadastroDeLivroToolStripMenuItem";
-            this.cadastroDeLivroToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.cadastroDeLivroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroDeLivroToolStripMenuItem.Text = "Cadastrar Livro";
             this.cadastroDeLivroToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeLivroToolStripMenuItem_Click);
             // 
             // consultarLivrosToolStripMenuItem
             // 
+            this.consultarLivrosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.consultarLivrosToolStripMenuItem.Name = "consultarLivrosToolStripMenuItem";
-            this.consultarLivrosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.consultarLivrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarLivrosToolStripMenuItem.Text = "Consultar Livros";
             this.consultarLivrosToolStripMenuItem.Click += new System.EventHandler(this.consultarLivrosToolStripMenuItem_Click);
             // 
             // atualizarLivroToolStripMenuItem
             // 
+            this.atualizarLivroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.atualizarLivroToolStripMenuItem.Name = "atualizarLivroToolStripMenuItem";
-            this.atualizarLivroToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.atualizarLivroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.atualizarLivroToolStripMenuItem.Text = "Atualizar Livro";
             this.atualizarLivroToolStripMenuItem.Click += new System.EventHandler(this.atualizarLivroToolStripMenuItem_Click);
             // 
             // gpbLogin
             // 
-            this.gpbLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.gpbLogin.BackColor = System.Drawing.Color.White;
+            this.gpbLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gpbLogin.Controls.Add(this.lblSenha);
             this.gpbLogin.Controls.Add(this.btnEntrar);
             this.gpbLogin.Controls.Add(this.label1);
             this.gpbLogin.Controls.Add(this.txtSenha);
             this.gpbLogin.Controls.Add(this.txtUsername);
             this.gpbLogin.Controls.Add(this.lblAdmin);
-            this.gpbLogin.Location = new System.Drawing.Point(328, 156);
+            this.gpbLogin.ForeColor = System.Drawing.Color.Black;
+            this.gpbLogin.Location = new System.Drawing.Point(324, 111);
             this.gpbLogin.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gpbLogin.Name = "gpbLogin";
             this.gpbLogin.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -180,7 +192,9 @@ namespace BBC_Desktop
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
+            this.lblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.Black;
             this.lblSenha.Location = new System.Drawing.Point(79, 194);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(102, 13);
@@ -190,6 +204,7 @@ namespace BBC_Desktop
             // 
             // btnEntrar
             // 
+            this.btnEntrar.ForeColor = System.Drawing.Color.Black;
             this.btnEntrar.Location = new System.Drawing.Point(82, 168);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEntrar.Name = "btnEntrar";
@@ -202,7 +217,9 @@ namespace BBC_Desktop
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(71, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -233,7 +250,9 @@ namespace BBC_Desktop
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
+            this.lblAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.ForeColor = System.Drawing.Color.Black;
             this.lblAdmin.Location = new System.Drawing.Point(63, 65);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
@@ -245,10 +264,14 @@ namespace BBC_Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1094, 604);
             this.Controls.Add(this.gpbLogin);
             this.Controls.Add(this.mspBiBliocamp);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mspBiBliocamp;
